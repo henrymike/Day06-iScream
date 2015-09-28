@@ -14,13 +14,34 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) AppDelegate            *appDelegate;
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, strong) NSArray                *flavorsArray;
+@property (nonatomic, strong) AppDelegate               *appDelegate;
+@property (nonatomic, strong) NSManagedObjectContext    *managedObjectContext;
+@property (nonatomic, strong) NSArray                   *flavorsArray;
+@property (nonatomic, weak)   IBOutlet    UITableView   *flavorsTableView;
 
 @end
 
 @implementation ViewController
+
+#pragma mark - Table View Methods
+
+- (NSInteger)numberofSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _flavorsArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    Flavors *currentFlavor = _flavorsArray[indexPath.row];
+    cell.textLabel.text = [currentFlavor flavorName];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Gallons: %0.1f", [self totalInventoryForFlavor:currentFlavor]];
+    //this is how you access images
+    //cell.imageView.image
+    return cell;
+}
 
 #pragma mark - Core Methods
 
