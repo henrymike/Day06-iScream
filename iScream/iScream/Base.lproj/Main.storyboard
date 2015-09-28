@@ -45,6 +45,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="acK-oQ-pl2" kind="show" id="GLa-MK-okf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -60,7 +63,13 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Wkx-ma-eky" secondAttribute="bottom" id="TZQ-sU-G1d"/>
                             <constraint firstItem="Wkx-ma-eky" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-64" id="e0R-2J-SUC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wkx-ma-eky" secondAttribute="trailing" constant="-20" id="fFo-bB-UTt"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Wkx-ma-eky" secondAttribute="bottom" id="oSF-IE-r0S"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TZQ-sU-G1d"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Flavors" id="tqA-xa-HMJ"/>
                     <connections>
@@ -70,6 +79,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1057" y="243"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="QkO-Vr-D9u">
+            <objects>
+                <viewController id="acK-oQ-pl2" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ceh-Uf-fjG"/>
+                        <viewControllerLayoutGuide type="bottom" id="D6f-9R-Gx5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6rz-yZ-CsL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcZ-Hq-zxW">
+                                <rect key="frame" x="37" y="105" width="242" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="flavorNameLabel" destination="FcZ-Hq-zxW" id="45X-fw-0gf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pkv-MF-TbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691" y="243"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dwv-ps-7om">

@@ -20,6 +20,7 @@
 		1FADFB501B25157C001CA00E /* iScream.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 1FADFB3F1B25157C001CA00E /* iScream.sqlite-shm */; };
 		1FADFB511B25157C001CA00E /* iScream.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 1FADFB401B25157C001CA00E /* iScream.sqlite-wal */; };
 		1FADFB521B25157C001CA00E /* iScream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FADFB411B25157C001CA00E /* iScream.xcdatamodeld */; };
+		559475FD1BB9C3F800CAD490 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 559475FC1BB9C3F800CAD490 /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		1FADFB3F1B25157C001CA00E /* iScream.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iScream.sqlite-shm"; sourceTree = "<group>"; };
 		1FADFB401B25157C001CA00E /* iScream.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iScream.sqlite-wal"; sourceTree = "<group>"; };
 		1FADFB421B25157C001CA00E /* Table_View_Intro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Table_View_Intro.xcdatamodel; sourceTree = "<group>"; };
+		559475FB1BB9C3F800CAD490 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		559475FC1BB9C3F800CAD490 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				1FADFB101B25148D001CA00E /* ViewController.h */,
 				1FADFB111B25148D001CA00E /* ViewController.m */,
 				1FADFB131B25148D001CA00E /* Main.storyboard */,
+				559475FB1BB9C3F800CAD490 /* DetailViewController.h */,
+				559475FC1BB9C3F800CAD490 /* DetailViewController.m */,
 				1FADFB161B25148D001CA00E /* Images.xcassets */,
 				1FADFB531B251592001CA00E /* Data */,
 				1FADFB181B25148D001CA00E /* LaunchScreen.xib */,
@@ -258,6 +263,7 @@
 				1FADFB4E1B25157C001CA00E /* InventoryItems.m in Sources */,
 				1FADFB521B25157C001CA00E /* iScream.xcdatamodeld in Sources */,
 				1FADFB091B25148D001CA00E /* main.m in Sources */,
+				559475FD1BB9C3F800CAD490 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

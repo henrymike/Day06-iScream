@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "Flavors.h"
 #import "InventoryItems.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
@@ -38,9 +39,16 @@
     Flavors *currentFlavor = _flavorsArray[indexPath.row];
     cell.textLabel.text = [currentFlavor flavorName];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Gallons: %0.1f", [self totalInventoryForFlavor:currentFlavor]];
-    //this is how you access images
-    //cell.imageView.image
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",currentFlavor.flavorImage]];
     return cell;
+}
+
+// This takes whatever was selected from the first controller and puts it in the Label
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailViewController *destController = [segue destinationViewController];
+    NSIndexPath *indexPath = [_flavorsTableView indexPathForSelectedRow];
+    Flavors *currentFlavor = _flavorsArray[indexPath.row];
+    destController.currentFlavor = currentFlavor;
 }
 
 #pragma mark - Core Methods
